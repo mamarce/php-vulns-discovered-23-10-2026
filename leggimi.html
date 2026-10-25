@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>correzione temporanea CVE-2026-109618 - CVE-2026-109619 -
+      CVE-2026-115560</title>
+  </head>
+  <body>
+    <p dir="auto">Uno script da caricare nel server per verificare
+      istantaneamente se la versione di PHP in uso è vulnerabile e se,
+      applicando alcune modifiche ai files di configurazione php.ini e
+      apache2 è possibile ridurre le possibilità di attacco.<br>
+    </p>
+    <p dir="auto">Elenco dei files:<br>
+    </p>
+    <ul>
+      <li><b>verifica.php</b></li>
+    </ul>
+    <p dir="auto">è lo script da caricare TEMPORANEAMENTE (ricordate di
+      cancellarlo dopo l'uso) nel server<br>
+    </p>
+    <ul>
+      <li><b>conf_mods.txt</b></li>
+    </ul>
+    istruzioni passo passo per modificare i parametri di PHP e di APACHE
+    per mitigare la pericolosità delle CVE segnalate (qualora non sia
+    possibile aggiornare nell'immediato la versione di PHP)<br>
+    <br>
+    <hr>
+    <p dir="auto"><font color="#ff0000"><b>ATTENZIONE: le patch
+          risolvono solo in parte le vulnerabilità riscontrate in tutte
+          le versioni di PHP</b></font> e servono a rendere meno facile
+      l'attacco ma non sono sostitutive dell'aggiornamento di versione.<br>
+    </p>
+    <p dir="auto">Possono essere quindi applicate temporaneamente ma E'
+      NECESSARIO al più presto un aggiornamento della versione di PHP in
+      uso, secondo il seguente schema: <br>
+    </p>
+    <ul>
+      <li>PHP 8.5 - versioni dalla 8.5.12 o superiori</li>
+      <li>PHP 8.4 - versioni dalla 8.4.27 o superiori</li>
+      <li>PHP 8.3 - versioni dalla 8.3.36 o superiori</li>
+      <li>PHP 8.2 - versioni dalla 8.2.35 o superiori</li>
+    </ul>
+    <p dir="auto">TUTTE le versioni di PHP inferiori alla 8.2.35 sono
+      affette dalle vulnerabilità scoperte il 23 ottobre 2026, ovvero
+      CVE-2026-109618 - CVE-2026-109619 - CVE-2026-115560<br>
+      <br>
+    </p>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  </body>
+</html>
