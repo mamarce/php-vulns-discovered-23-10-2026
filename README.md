@@ -17,3 +17,4 @@ Le patch risolvono solo in parte le vulnerabilità riscontrate in tutte le versi
 - PHP 8.2 versioni dalla 8.2.35 o superiori
 
 ### TUTTE le versioni di PHP inferiori alla 8.2.35 sono affette dalle vulnerabilità scoperte il 23 ottobre 2026
+### Descrizione delle vulnerabilità disponibili qui: https://cert.europa.eu/publications/security-advisories/2026-018
