@@ -1,0 +1,28 @@
+1) MODIFICA DEL FILE PHP.INI
+editare, da root, il file di configurazione di PHP:
+es: /etc/php/7.x/apache2/php.ini
+
+cercare e verificare i seguenti valori
+; Disabilita l'upload progress (impostare il valore a 0)
+  session.upload_progress.enabled = 0
+
+; Limita severamente le dimensioni delle richieste
+; Imposta 8M se non ti servono gli upload, oppure max 32M se strettamente necessari.
+  post_max_size = 8M
+
+; Assicurati che questo valore sia sempre INFERIORE a post_max_size
+  upload_max_filesize = 2M
+
+2) aggiungere una direttiva per tutti i siti di apache2 che riduca l'uso dei limiti di memoria da parte di PHP
+nano /etc/apache2/conf-available/php-mitigation.conf
+inserire nel file appena creato:
+	# mitigazione CVE-2026-109618
+	php_admin_value memory_limit -1
+
+3) abilitare le modifiche e riavviare i servizi
+  sudo a2enconf php-mitigation
+  sudo systemctl restart apache2
+
+4) una volta abilitate le modifiche e riavviati i servizi, verificare da web chiamando il file /verifica.php già caricato
+
+5) Ricordati di cancellare il file /verifica.php subito dopo l'uso per non esporre informazioni riservate sulla configurazione in uso.
